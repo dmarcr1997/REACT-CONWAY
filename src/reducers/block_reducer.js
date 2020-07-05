@@ -1,22 +1,18 @@
 const BlockReducer = (
     state ={
-        blocks: []
+        blocks: [[0,0,0,0,0],
+                 [0,0,0,0,0],
+                 [0,0,0,0,0],
+                 [0,0,0,0,0]]
     },
     action
 ) => {
     switch(action.type){
-        case 'ADD_BLOCK':
-            let newBlocks = [...state.blocks, action.block]
-            return state
         case 'DEACTIVATE_BLOCK':
-            let blockIndx = state.blocks.findIndex(bl => bl.id === action.block.id)
-            state.blocks[blockIndx].active = false
-
+            state.blocks[action.index] = 0
             return state
         case 'ACTIVATE_BLOCK':
-            let blockIndx = state.blocks.findIndex(bl => bl.id === action.block.id)
-            state.blocks[blockIndx].active = true
-            
+            state.blocks[action.index] = 1
             return state
         default:
             return state 

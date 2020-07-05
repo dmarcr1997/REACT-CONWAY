@@ -5,7 +5,7 @@ class Blocks extends Component{
     render(){
         return(
             <div>
-                {this.props.blocks.map( block => <Block id={block.id} active={block.active}/>)}
+                {this.props.blocks.map( (indx, block) => <Block key={indx} active={block}/>)}
             </div>
         )
     }
