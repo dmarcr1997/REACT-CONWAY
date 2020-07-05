@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import {composeWithDevTools} from 'redux-devtools-extension'
+import BlockReducer from './reducers/block_reducer';
 
-
+const store = createStore(BlockReducer, composeWithDevTools())
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
