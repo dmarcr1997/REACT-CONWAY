@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Block from './containers/Blocks';
+import Blocks from './containers/Blocks';
 function App() {
   return (
     <div className="App">

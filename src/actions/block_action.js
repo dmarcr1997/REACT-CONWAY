@@ -1,7 +1,9 @@
-export const checkBlocks = (number) => {
+export const checkBlocks = () => {
     
 }
 
-export const addBlock = (number) => {
-
-} 
+export const initCanv = () => {
+    return (dispatch) => {
+        return dispatch({type: 'INIT'})
+    }
+}
