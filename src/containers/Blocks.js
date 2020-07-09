@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import Block from '../components/Block';
+import React, { useState, useEffect } from 'react';
 class Blocks extends Component{
     renderBlocks = () => {
         return this.props.blocks.map(i =>{
