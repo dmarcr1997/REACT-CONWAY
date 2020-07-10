@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Blocks from './containers/Blocks';
+import BlocksContainer from './containers/BlocksContainer';
 function App() {
   return (
     <div className="App">
-      <Blocks />
+      <BlocksContainer />
     </div>
   );
 }
