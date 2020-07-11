@@ -1,19 +1,16 @@
 import React, {useEffect} from 'react';
 import Block from './Block';
 const Blocks = (props) => {
-    debugger
     useEffect(() => {
-        debugger
         const interval = setInterval(() => {
-            debugger
             props.chngFunction()
-          }, 100);
+          }, 50);
           return () => clearInterval(interval);
     }, []);
     return(
-        <>
+        <div className='blocks'>
             {props.blcks.map(b => <Block blck={b} />)}
-        </>
+        </div>
     )
 }
 
